@@ -8,6 +8,10 @@ nav {
   height: 100px;
   justify-content: center;
   align-items: center;
+  position: sticky;
+  top: 0;
+  background-color: white;
+  z-index: 100;
 }
 
 nav ul {
@@ -24,10 +28,13 @@ nav ul {
   font-size: 1.5rem;
 }
 
-.cartButton {
+.cartLink {
   position: absolute;
-  background-color: white;
   right: 20px;
+}
+
+.cartButton {
+  background-color: white;
   width: 70px;
   height: 70px;
   border: none;
@@ -37,4 +44,27 @@ nav ul {
 button:hover {
   background-color: rgb(240, 240, 240);
   cursor: pointer;
+}
+
+.hidden {
+  display: none;
+  width: 0;
+  height: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.counter {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: rgb(226, 60, 60);
+  width: 20px;
+  height: 20px;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
 }

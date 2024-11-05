@@ -1,0 +1,68 @@
+#main > h1 {
+  text-align: center;
+  font-weight: 700;
+  letter-spacing: 20px;
+  word-spacing: 20px;
+  font-size: 5rem;
+  text-transform: uppercase;
+}
+
+#main {
+  background-image: url(../assets/home_background.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center 20%;
+  height: 100vh;
+  padding-top: 30px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hidden {
+  display: none;
+}
+
+.checkoutComplete {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  width: 200px;
+  position: fixed;
+  background-color: white;
+  border: 2px solid black;
+  border-radius: 12px;
+  padding: 10px;
+  right: -230px;
+  top: 150px;
+  animation: 4s displayInfo 1;
+}
+
+@keyframes displayInfo {
+  0% {
+    transform: translate(0);
+  }
+
+  20% {
+    transform: translate(-250px);
+  }
+
+  80% {
+    opacity: 1;
+    transform: translate(-250px);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translate(-250px);
+  }
+}
+
+.checkoutComplete h2 {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.checkIcon {
+  width: 30px;
+  height: 30px;
+}

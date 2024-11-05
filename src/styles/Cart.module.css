@@ -1,0 +1,147 @@
+main {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+}
+
+.items {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.item {
+  display: grid;
+  width: 600px;
+  height: 150px;
+  grid-template-columns: 150px 1fr 4fr 100px;
+  margin: auto;
+  padding: 10px;
+  border-radius: 12px;
+  box-shadow: 3px 3px 10px 0px rgba(206, 206, 206, 1);
+  gap: 10px;
+}
+
+.item > img {
+  max-width: 150px;
+  max-height: 150px;
+  grid-column: 1/2;
+  grid-row: 1/3;
+  margin: auto;
+}
+
+.removeButton img {
+  width: 50px;
+  height: 50px;
+}
+
+.removeButton {
+  width: 60px;
+  height: 60px;
+  background-color: rgba(224, 127, 127, 0);
+  border-radius: 50%;
+  border: none;
+  grid-column: 4/5;
+  grid-row: 1/3;
+  margin: auto;
+  transition: background-color 0.5s ease-out;
+}
+
+.removeButton:hover {
+  background-color: rgb(224, 127, 127);
+}
+
+.itemTitle {
+  grid-column: 2/4;
+  grid-row: 1/2;
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+}
+
+.itemPrice {
+  grid-column: 2/3;
+  grid-row: 2/3;
+  font-size: 1.5rem;
+}
+
+.itemCount {
+  grid-column: 3/4;
+  grid-row: 2/3;
+  display: flex;
+  gap: 1px;
+  justify-content: end;
+}
+
+.countInput::-webkit-outer-spin-button,
+.countInput::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.countInput {
+  width: 40px;
+  height: 26px;
+  text-align: center;
+}
+
+.decButton,
+.incButton {
+  width: 30px;
+  height: 30px;
+}
+
+.summary {
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  height: 200px;
+  padding: 20px;
+  box-shadow: 3px 3px 10px 0px rgba(206, 206, 206, 1);
+  position: sticky;
+  top: 20%;
+}
+
+.cost {
+  display: flex;
+  flex-direction: column;
+}
+
+.cartH1 {
+  font-size: 2rem;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.cost div {
+  display: flex;
+  justify-content: space-between;
+}
+
+.delivery {
+  border-bottom: 2px solid black;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+}
+
+.total {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.checkoutButton {
+  height: 50px;
+  width: 250px;
+  font-size: 1.5rem;
+  margin: auto;
+  border-radius: 24px;
+  background-color: rgb(3, 160, 3);
+  color: white;
+  font-weight: 500;
+}
+
+.checkoutButton:hover {
+  background-color: rgb(0, 143, 0);
+}

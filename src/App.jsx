@@ -1,7 +1,16 @@
-import "./styles/App.css";
+import { Outlet } from "react-router-dom";
+import NavBar from "./components/NavBar";
+import { useState } from "react";
 
 function App() {
-  return <h1>Simple Shop</h1>;
+  const [cartItems, setCartItems] = useState([]);
+
+  return (
+    <>
+      <NavBar cartItems={cartItems} />
+      <Outlet context={[cartItems, setCartItems]} />
+    </>
+  );
 }
 
 export default App;
